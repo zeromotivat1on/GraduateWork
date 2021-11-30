@@ -10,7 +10,7 @@ all: install
 
 install: $(NAME)
 
-$(NAME): main.c
+$(NAME):
 	$(CC) main.c $(CC_FLAGS) $(SDL_FLAGS) -o $(NAME)
 
 uninstall:
