@@ -1,17 +1,28 @@
-CC 				= gcc
+CC 				= g++
 NAME 			= graduate_project
-SDL_DIR		= src/sdl
+
+DEL_WIN		= del
+DEL_LIN		= rm -rf
+
+INC_DIR		= inc
+INC_FILES	= $(wildcard $(INC_DIR)/*.h)
+
+SRC_DIR		= src
+SRC_FILES	= $(wildcard $(SRC_DIR)/*.cpp)
+
+SDL_DIR		= $(addprefix $(SRC_DIR), /sdl)
 SDL_LIB 	= $(addprefix $(SDL_DIR), /lib)
 SDL_INC 	= $(addprefix $(SDL_DIR), /include)
-SDL_FLAGS	= -lmingw32 -lSDL2main -lSDL2
-CC_FLAGS	= $(addprefix -I, $(SDL_INC)) $(addprefix -L, $(SDL_LIB))
+SDL_FLAGS	= -lmingw32 -lSDL2main -lSDL2 $(addprefix -I, $(SDL_INC)) $(addprefix -L, $(SDL_LIB))
 
 all: install
 
 install: $(NAME)
 
 $(NAME):
-	$(CC) main.c $(CC_FLAGS) $(SDL_FLAGS) -o $(NAME)
+	$(CC) $(SRC_FILES) $(SDL_FLAGS) -o $@
 
 uninstall:
-	del $(addprefix $(NAME), .exe)
+	$(DEL_WIN) $(addprefix $(NAME), .exe)
+
+reinstall: uninstall install
