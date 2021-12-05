@@ -1,10 +1,10 @@
 # Overview
 This project will contain some procedural generation implementation instances\
-They will consists of the following ones:\
+They will consists of the following ones:
 - [ ] Life Simulation
 - [ ] Fire Simulation
 ### Technical Part
-The project is written using the following technologies:\
+The project is written using the following technologies:
 - `C++`
 - `SDL 2.0`
 # Prerequisites
