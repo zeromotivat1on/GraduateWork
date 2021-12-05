@@ -1,5 +1,5 @@
 CC 				= g++
-NAME 			= graduate_project
+NAME 			= procedural_generation
 
 DEL_WIN		= del
 DEL_LIN		= rm -rf
