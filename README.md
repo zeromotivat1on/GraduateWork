@@ -15,7 +15,7 @@ Here you will find several possible variants to download `SDL`\
 \
 In addition, you should install [MingW](https://www.mingw-w64.org/) and [GNU Make](http://gnuwin32.sourceforge.net/packages/make.htm)\
 \
-The project was built in VSCode, so you would probably consider to install [GCC](https://gcc.gnu.org/) as well\
+The project was built in VSCode, so you would probably consider to install [GCC](https://gcc.gnu.org/) as well
 # Launch
 To launch an app just run `make` command in PowerShell in one of the following ways:
 ```
